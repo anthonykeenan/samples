@@ -1,5 +1,6 @@
 .DS_Store
-*/build/
+**/build/
+**/logs
 */.gradle/
 */.idea/*
 corda-nodeinfo/corda-nodeinfo.iml
