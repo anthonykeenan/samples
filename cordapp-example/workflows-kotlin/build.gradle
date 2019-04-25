@@ -87,6 +87,15 @@ task deployNodes(type: Cordform, dependsOn: ['jar']) {
             deploy = false
         }
         cordapps.clear()
+        extraConfig = [
+                "dataSourceProperties.dataSource.url"       : "jdbc:sqlserver://localhost;databaseName=Notary",
+                "dataSourceProperties.dataSource.user"      : "PartyA",
+                "dataSourceProperties.dataSource.password"  : "PartyAPa55",
+                "dataSourceProperties.dataSourceClassName"  : "com.microsoft.sqlserver.jdbc.SQLServerDataSource",
+                "database.transactionIsolationLevel"        : "READ_COMMITTED",
+                "database.runMigration"                     : "true",
+                "jarDirs"                                   : ["../../../../drivers"]
+        ]
     }
     node {
         name "O=PartyA,L=London,C=GB"
@@ -96,6 +105,15 @@ task deployNodes(type: Cordform, dependsOn: ['jar']) {
             adminAddress("localhost:10006")
         }
         rpcUsers = [[user: "user1", "password": "test", "permissions": ["ALL"]]]
+        extraConfig = [
+                "dataSourceProperties.dataSource.url"       : "jdbc:sqlserver://localhost;databaseName=PartyA",
+                "dataSourceProperties.dataSource.user"      : "PartyA",
+                "dataSourceProperties.dataSource.password"  : "PartyAPa55",
+                "dataSourceProperties.dataSourceClassName"  : "com.microsoft.sqlserver.jdbc.SQLServerDataSource",
+                "database.transactionIsolationLevel"        : "READ_COMMITTED",
+                "database.runMigration"                     : "true",
+                "jarDirs"                                   : ["../../../../drivers"]
+        ]
     }
     node {
         name "O=PartyB,L=New York,C=US"
@@ -105,6 +123,15 @@ task deployNodes(type: Cordform, dependsOn: ['jar']) {
             adminAddress("localhost:10010")
         }
         rpcUsers = [[user: "user1", "password": "test", "permissions": ["ALL"]]]
+        extraConfig = [
+                "dataSourceProperties.dataSource.url"       : "jdbc:sqlserver://localhost;databaseName=PartyB",
+                "dataSourceProperties.dataSource.user"      : "PartyA",
+                "dataSourceProperties.dataSource.password"  : "PartyAPa55",
+                "dataSourceProperties.dataSourceClassName"  : "com.microsoft.sqlserver.jdbc.SQLServerDataSource",
+                "database.transactionIsolationLevel"        : "READ_COMMITTED",
+                "database.runMigration"                     : "true",
+                "jarDirs"                                   : ["../../../../drivers"]
+        ]
     }
     node {
         name "O=PartyC,L=Paris,C=FR"
@@ -114,5 +141,14 @@ task deployNodes(type: Cordform, dependsOn: ['jar']) {
             adminAddress("localhost:10014")
         }
         rpcUsers = [[user: "user1", "password": "test", "permissions": ["ALL"]]]
+        extraConfig = [
+                "dataSourceProperties.dataSource.url"       : "jdbc:sqlserver://localhost;databaseName=PartyC",
+                "dataSourceProperties.dataSource.user"      : "PartyA",
+                "dataSourceProperties.dataSource.password"  : "PartyAPa55",
+                "dataSourceProperties.dataSourceClassName"  : "com.microsoft.sqlserver.jdbc.SQLServerDataSource",
+                "database.transactionIsolationLevel"        : "READ_COMMITTED",
+                "database.runMigration"                     : "true",
+                "jarDirs"                                   : ["../../../../drivers"]
+        ]
     }
 }

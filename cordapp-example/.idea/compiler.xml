@@ -10,12 +10,26 @@
       <module name="com.example.contracts-java.test" target="1.8" />
       <module name="com.example.contracts-kotlin.main" target="1.8" />
       <module name="com.example.contracts-kotlin.test" target="1.8" />
+      <module name="com.example.cordapp-example.main" target="1.8" />
+      <module name="com.example.cordapp-example.test" target="1.8" />
       <module name="com.example.workflows-java.integrationTest" target="1.8" />
       <module name="com.example.workflows-java.main" target="1.8" />
       <module name="com.example.workflows-java.test" target="1.8" />
       <module name="com.example.workflows-kotlin.integrationTest" target="1.8" />
       <module name="com.example.workflows-kotlin.main" target="1.8" />
       <module name="com.example.workflows-kotlin.test" target="1.8" />
+      <module name="cordapp-example.clients.main" target="1.8" />
+      <module name="cordapp-example.clients.test" target="1.8" />
+      <module name="cordapp-example.contracts-java.main" target="1.8" />
+      <module name="cordapp-example.contracts-java.test" target="1.8" />
+      <module name="cordapp-example.contracts-kotlin.main" target="1.8" />
+      <module name="cordapp-example.contracts-kotlin.test" target="1.8" />
+      <module name="cordapp-example.workflows-java.integrationTest" target="1.8" />
+      <module name="cordapp-example.workflows-java.main" target="1.8" />
+      <module name="cordapp-example.workflows-java.test" target="1.8" />
+      <module name="cordapp-example.workflows-kotlin.integrationTest" target="1.8" />
+      <module name="cordapp-example.workflows-kotlin.main" target="1.8" />
+      <module name="cordapp-example.workflows-kotlin.test" target="1.8" />
       <module name="java-source_integrationTest" target="1.8" />
       <module name="java-source_main" target="1.8" />
       <module name="java-source_test" target="1.8" />
